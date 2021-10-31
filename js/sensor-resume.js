@@ -39,7 +39,7 @@ async function display() {
 
         let tempAllVal = [];
         let tempAllHour = [];
-        for (let i = 10; i > 0; i--) {
+        for (let i = 6; i > 0; i--) {
             let index;
             if (hours - i < 0) {
                 index = hours - i + countVal;
