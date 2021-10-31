@@ -1,17 +1,5 @@
 function main() {
     display();
-
-    var bar = new ProgressBar.Circle(ok, {
-        strokeWidth: 6,
-        easing: 'easeInOut',
-        duration: 1400,
-        color: '#FFEA82',
-        trailColor: '#eee',
-        trailWidth: 1,
-        svgStyle: null
-    });
-
-    bar.animate(1.0);
 }
 
 async function display() {
@@ -35,7 +23,6 @@ async function display() {
     let allHour = [];
 
 
-
     document.getElementById("panel-capteur").innerHTML += `<h2>${data[id].name}</h2>`
 
     for (val in data[id].sensors) {
@@ -45,18 +32,15 @@ async function display() {
         let countVal = Object.keys(valueHours).length;
         let chartVal = `chart-${val}`;
         let currentVal = parseFloat(valueHours[hours]);
-        let extensionValue = valueHours[hours].replace(/[0-9]/g, '');
+        let extensionValue = valueHours[hours].replace(/[0-9,-]/g, '');
 
-        console.log(extensionValue)
-
-        let maxVal = 0;
+        let maxVal = -100;
         let minVal = 100;
 
         let tempAllVal = [];
         let tempAllHour = [];
         for (let i = 10; i > 0; i--) {
             let index;
-            console.log(hours - i)
             if (hours - i < 0) {
                 index = hours - i + countVal;
             } else {
@@ -113,7 +97,6 @@ async function display() {
 
     for (val in data[id].sensors) {
         let chartVal = `chart-${val}`;
-        console.log(allVal)
         let element = document.getElementById(chartVal);
 
         let chart = new Chart(
@@ -135,7 +118,6 @@ async function display() {
                 }
             }
         );
-        console.log(chart)
     }
 
 

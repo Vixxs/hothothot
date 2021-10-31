@@ -17,7 +17,6 @@ async function display() {
             alertMessage = json.alert;
         });
 
-    console.log(hours)
     for (val in data) {
         document.getElementById("panel-capteur").innerHTML += `<section class="h-box capteur-box" id="sensor-${data[val].id}" ><p class="circle">${data[val].sensors[0].valueHours[hours]}</p><h3>${data[val].name}</h3><p class="description">${data[val].desc}</p><p class="live-text">LIVE</p></section>`;
         displayAlertByTemp(parseInt(data[val].sensors[0].valueHours[hours]), data[val].name, data[val].location, alertMessage, data[val].id);
@@ -25,7 +24,6 @@ async function display() {
 
     for (val in data) {
         let url = window.location.origin + `/sensor-resume.html?id=${data[val].id}`;
-        console.log(url)
         document.getElementById(`sensor-${data[val].id}`).addEventListener("click", function() { location.href = url; })
 
     }
@@ -38,7 +36,6 @@ function displayAlertByTemp(temperature, location, type, alertMessage, id) {
     let minutes = new Date().getMinutes();
     let time = hours + ":" + minutes;
     let url = window.location.origin + `/sensor-resume.html?id=${id}`;
-    console.log(time);
 
     if (type == "exterieur") {
         if (temperature > 35) {
@@ -72,7 +69,6 @@ function alertTemplate(name, message, description, time, url) {
                         <p>${description}</p>
                         <p class="time">${time}</p>`;
 
-    console.log(url);
     let close = document.createElement("img");
     close.classList.add("close-alert");
     close.src = "https://img.icons8.com/material-rounded/50/000000/delete-sign.png";

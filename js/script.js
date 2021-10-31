@@ -49,7 +49,6 @@ async function settings(node) {
             settings = data;
         });
 
-    console.log(settings.darkmode);
     let darkmodeBool = JSON.parse(settings.darkmode);
     if (darkmodeBool == true) {
         style.href = "/style/darkmode.css";
