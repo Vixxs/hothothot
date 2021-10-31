@@ -4,7 +4,7 @@
 ## Introduction
 Site héberger [ici](http://vixx.alwaysdata.net/)
 
-Si vous souhaiter modifier le site il vous est possible de changer les fichier JSON en concervant leur structures 
+Si vous souhaitez modifier le site il vous est possible de changer les fichier JSON en concervant leur structures 
 
 
 ## Thème
