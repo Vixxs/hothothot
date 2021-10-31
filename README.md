@@ -34,7 +34,7 @@ pour cela il vous suffit de respecter la structure suivante et les rajouter à l
         "id": "0",
         "location": "exterieur", //exterieur ou interieur
         "desc": "Description générale",
-        "sensors": [{ // Ajouter le nombre de capteur souhaiter dans la piece et leur valeur selon l'heure
+        "sensors": [{ // Ajouter le nombre de capteur souhaité dans la piece et leur valeurs selon l'heure
             "type": "Temperature",
             "valueHours": {
                 "0": "45°C",
