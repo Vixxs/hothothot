@@ -54,7 +54,7 @@ async function display() {
 
         let tempAllVal = [];
         let tempAllHour = [];
-        for (let i = 5; i > 0; i--) {
+        for (let i = 10; i > 0; i--) {
             let index;
             console.log(hours - i)
             if (hours - i < 0) {

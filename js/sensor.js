@@ -32,84 +32,62 @@ async function display() {
 }
 
 function displayAlertByTemp(temperature, location, type, alertMessage, id) {
+    let alert = document.getElementsByClassName("alert");
     let mainArea = document.getElementById("alert-box");
     let hours = new Date().getHours();
-    let seconds = new Date().getSeconds();
-    let time = hours + ":" + seconds;
+    let minutes = new Date().getMinutes();
+    let time = hours + ":" + minutes;
     let url = window.location.origin + `/sensor-resume.html?id=${id}`;
     console.log(time);
 
     if (type == "exterieur") {
         if (temperature > 35) {
-
-            mainArea.innerHTML += ` 
-            <section class="alert">
-                <p class="red">${location}</p>
-                <h2>${alertMessage[0].message}</h2>
-                <p>${alertMessage[0].description}</p>
-                <p class="time">${time}</p>
-                <img class="close-alert" src="https://img.icons8.com/material-rounded/50/000000/delete-sign.png" />
-            </section>`
-
+            mainArea.append(alertTemplate(location, alertMessage[0].message, alertMessage[0].description, time, url));
         }
         if (temperature < 0) {
-            mainArea.innerHTML += ` 
-            <section class="alert">
-                <p class="red">${location}</p>
-                <h2>${alertMessage[1].message}</h2>
-                <p>${alertMessage[1].description}</p>
-                <p class="time">${time}</p>
-                <img class="close-alert" src="https://img.icons8.com/material-rounded/50/000000/delete-sign.png" />
-            </section>`
+            mainArea.append(alertTemplate(location, alertMessage[1].message, alertMessage[1].description, time, url));
         }
     }
     if (type == "interieur") {
         if (temperature > 22) {
-            console.log("ici");
-            mainArea.innerHTML += ` 
-            <section class="alert">
-                <p class="red">${location}</p>
-                <h2>${alertMessage[2].message}</h2>
-                <p>${alertMessage[2].description}</p>
-                <p class="time">${time}</p>
-                <img class="close-alert" src="https://img.icons8.com/material-rounded/50/000000/delete-sign.png" />
-            </section>`
-
+            mainArea.append(alertTemplate(location, alertMessage[2].message, alertMessage[2].description, time, url));
         }
         if (temperature > 50) {
-            mainArea.innerHTML += ` 
-            <section class="alert">
-                <p class="red">${location}</p>
-                <h2>${alertMessage[3].message}</h2>
-                <p>${alertMessage[3].description}</p>
-                <p class="time">${time}</p>
-                <img class="close-alert" src="https://img.icons8.com/material-rounded/50/000000/delete-sign.png" />
-            </section>`
+            mainArea.append(alertTemplate(location, alertMessage[3].message, alertMessage[3].description, time, url));
         }
         if (temperature < 12) {
-            mainArea.innerHTML += ` 
-            <section class="alert">
-                <p class="red">${location}</p>
-                <h2>${alertMessage[4].message}</h2>
-                <p>${alertMessage[4].description}</p>
-                <p class="time">${time}</p>
-                <img class="close-alert" src="https://img.icons8.com/material-rounded/50/000000/delete-sign.png" />
-            </section>`
+            mainArea.append(alertTemplate(location, alertMessage[4].message, alertMessage[4].description, time, url));
         }
         if (temperature < 0) {
-            mainArea.innerHTML += ` 
-            <section class="alert">
-                <p class="red">${location}</p>
-                <h2>${alertMessage[5].message}</h2>
-                <p>${alertMessage[5].description}</p>
-                <p class="time">${time}</p>
-                <img class="close-alert" src="https://img.icons8.com/material-rounded/50/000000/delete-sign.png" />
-            </section>`
+            mainArea.append(alertTemplate(location, alertMessage[5].message, alertMessage[5].description, time, url));
         }
     }
 }
 
+function alertTemplate(name, message, description, time, url) {
+    let alert = document.createElement("section");
+    alert.classList.add("alert");
+    alert.innerHTML += `<p class="red">${name}</p>
+                        <h2>${message}</h2>
+                        <p>${description}</p>
+                        <p class="time">${time}</p>`;
+
+    console.log(url);
+    let close = document.createElement("img");
+    close.classList.add("close-alert");
+    close.src = "https://img.icons8.com/material-rounded/50/000000/delete-sign.png";
+    alert.append(close);
+    alert.onclick = function() { location.href = url; }
+    close.onclick = function() {
+        window.event.stopPropagation();
+        alert.style.display = "none";
+    }
+
+    return alert;
+}
+
 function main() {
+
     display()
 }
 

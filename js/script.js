@@ -40,7 +40,7 @@ function openForm() {
 async function settings(node) {
 
     let settings;
-    let style = document.getElementById("darkmode");
+    let style = document.getElementById("style");
 
     await fetch('../json/settings.json')
         .then(res => res.json())
@@ -52,7 +52,7 @@ async function settings(node) {
     console.log(settings.darkmode);
     let darkmodeBool = JSON.parse(settings.darkmode);
     if (darkmodeBool == true) {
-        style.media = '';
+        style.href = "/style/darkmode.css";
     }
 }
 
