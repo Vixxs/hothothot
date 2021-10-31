@@ -1,0 +1,204 @@
+html {
+    background-color: #1e1f20 !important;
+}
+
+body {
+    background-color: #1e1f20 !important;
+}
+
+html,
+body,
+input,
+textarea,
+select,
+button {
+    background-color: #1f2223;
+}
+
+html,
+body,
+input,
+textarea,
+select,
+button {
+    color: #ffffff;
+}
+
+a {
+    color: #42bdff;
+}
+
+table {
+    border-color: #6d767a;
+}
+
+::placeholder {
+    color: #e7ded1;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #6f7600 !important;
+    color: #ffffff !important;
+}
+
+::-webkit-scrollbar {
+    background-color: #2a2e2f;
+    color: #ded5c7;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5a6064;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #717a7f;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #5e6569;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #1f2223;
+}
+
+::selection {
+    background-color: #0064dd !important;
+    color: #ffffff !important;
+}
+
+::-moz-selection {
+    background-color: #0064dd !important;
+    color: #ffffff !important;
+}
+
+
+/* Variables Style */
+
+:root {
+    --darkreader-neutral-background: #191b1d;
+    --darkreader-neutral-text: #ffffff;
+    --darkreader-selection-background: #0064dd;
+    --darkreader-selection-text: #ffffff;
+}
+
+
+/* Modified CSS */
+
+html {
+    color: rgb(255, 70, 118);
+    background-color: rgb(39, 42, 43);
+}
+
+header {
+    background-color: rgb(31, 34, 35);
+}
+
+.selected {
+    background-color: rgb(39, 42, 43);
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 34, 35);
+}
+
+.circle {
+    background-color: rgb(31, 34, 35);
+    border-color: initial;
+    color: rgb(255, 255, 255);
+}
+
+.capteur-box h3 {
+    color: rgb(255, 255, 255);
+}
+
+.capteur-box {
+    background-color: rgb(31, 34, 35);
+    color: rgb(255, 255, 255);
+}
+
+.data-box {
+    background-color: rgb(31, 34, 35);
+    color: rgb(255, 255, 255);
+}
+
+.resume {
+    background-color: rgb(31, 34, 35);
+    color: rgb(255, 255, 255);
+}
+
+.data-box h3 {
+    color: rgb(255, 255, 255);
+}
+
+.graph-box h3 {
+    color: rgb(255, 255, 255);
+}
+
+.title-grid {
+    color: rgb(255, 255, 255);
+}
+
+.graph-box {
+    background-color: rgb(31, 34, 35);
+    color: rgb(255, 255, 255);
+}
+
+.description {
+    color: #cecece;
+}
+
+#side-menu {
+    color: #ffffff;
+    background-color: rgb(31, 34, 35);
+}
+
+#side-menu li {
+    list-style-image: initial;
+    border-color: rgb(65, 70, 74);
+}
+
+#side-menu li:hover {
+    background-color: rgb(39, 42, 43);
+}
+
+#logout {
+    background-color: rgb(229, 21, 62);
+    color: rgb(255, 255, 255);
+    border-color: rgb(218, 20, 60) !important;
+}
+
+#logout:hover {
+    background-color: rgb(31, 34, 35);
+    color: rgb(255, 70, 118);
+}
+
+footer {
+    background-color: rgb(31, 34, 35);
+    color: rgb(255, 255, 255);
+}
+
+.live-text {
+    color: rgb(255, 70, 118);
+    border-color: initial;
+}
+
+
+/* Override Style */
+
+.vimvixen-hint {
+    background-color: #a06c00 !important;
+    border-color: #ffe519 !important;
+    color: #ffffff !important;
+}
+
+::placeholder {
+    opacity: 0.5 !important;
+}
+
+embed[type="application/pdf"] {
+    filter: invert(100%) contrast(90%);
+}

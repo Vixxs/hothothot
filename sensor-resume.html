@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotHotHot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style/style.css">
+    <link id="darkmode" rel="stylesheet" media="none" href="/style/darkmode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="v-box">
+            <h1 id="name">H</h1>
+            <p id="subtitle">Hot Hot Hot</p>
+        </section>
+
+        <img onclick="openMenu()" id="menu" src="img/icons8-menu.png" alt="">
+        <nav id="side-menu">
+            <ul>
+                <li id="account">
+                    <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/admin-settings-male.png" alt="" /> Mon compte
+                </li>
+                <li id="sensors">
+                    <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/temperature--v1.png" alt="" /> Mes capteurs
+                </li>
+                <li id="settings">
+                    <img class="icon" src="https://img.icons8.com/material/24/000000/horizontal-settings-mixer--v1.png" alt="" /> Parametres
+                </li>
+                <li id="logout">
+                    <img id="logout-icon" class="icon" src="img/icons8-exit4.png" alt="" /> Déconnexion
+                </li>
+            </ul>
+        </nav>
+
+        <img id="close" src="img/icons8-fermer.png" alt="">
+    </header>
+
+    <main id="capteur-section">
+        <section id="panel-capteur">
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Vincent Asta copyright © 2021-2022</p>
+    </footer>
+    <script src="node_modules/chart.js/dist/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sensor-resume.js"></script>
+
+
+</body>
+
+
+</html>

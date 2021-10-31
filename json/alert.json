@@ -1,0 +1,27 @@
+{
+    "alert": [{
+        "message": "Hot Hot Hot !",
+        "description": "La temperature est suppérieur à 35°C",
+        "capteur": "exterieur"
+    }, {
+        "message": "Banquisse en vue !",
+        "description": "La temperature est inferrieur à 0°C",
+        "capteur": "exterieur"
+    }, {
+        "message": "Baissez le chauffage !",
+        "description": "La temperature est suppérieur à 22°C",
+        "capteur": "interieur"
+    }, {
+        "message": "Appelez les pompiers ou arrêtez votre barbecue !",
+        "description": "La temperature est suppérieur à 50°C",
+        "capteur": "interieur"
+    }, {
+        "message": "Montez le chauffage ou mettez un gros pull  !",
+        "description": "La temperature est inferrieur à 12°C",
+        "capteur": "interieur"
+    }, {
+        "message": "Canalisations gelées, appelez SOS plombier - et mettez un bonnet !",
+        "description": "La temperature est inferrieur à  0°C",
+        "capteur": "interieur"
+    }]
+}
