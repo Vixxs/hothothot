@@ -518,11 +518,10 @@ footer p {
     font-size: 13px;
 }
 
-@media (max-width: 1560px) {}
-
 @media (max-width: 800px) {
     .graph-box {
         width: auto;
+        min-width: 100px;
     }
 }
 
