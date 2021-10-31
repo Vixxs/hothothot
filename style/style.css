@@ -235,7 +235,6 @@ main h2 {
     padding: 20px;
     height: fit-content;
     margin: 10px;
-    min-width: 350px;
     color: black;
     width: 50vw;
 }
@@ -520,6 +519,12 @@ footer p {
 }
 
 @media (max-width: 1560px) {}
+
+@media (max-width: 800px) {
+    .graph-box {
+        width: auto;
+    }
+}
 
 @-webkit-keyframes slide-bottom {
     0% {
