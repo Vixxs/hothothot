@@ -2,7 +2,7 @@
 # HotHotHot
 
 ## Introduction
-Site héberger [ici](http://vixx.alwaysdata.net/)
+Site hébergé [ici](http://vixx.alwaysdata.net/)
 
 Si vous souhaitez modifier le site il vous est possible de changer les fichier JSON en concervant leur structures 
 
