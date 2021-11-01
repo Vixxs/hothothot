@@ -109,4 +109,4 @@ Pour cette partie j'ai eu recours à une librairie de graphe nommé Chart.js pou
 
 ## Bilan 
 Je suis assez fière du rendu final en espérant que cela respecte l'ensemble des consignes. 
-C'est un bon projet et j'hâte de le poursuivre prochainement.
+C'est un bon projet et j'ai hâte de le poursuivre prochainement.
