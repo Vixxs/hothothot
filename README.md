@@ -5,7 +5,7 @@
 Site hébergé [ici](http://vixx.alwaysdata.net/)
 
 Si vous souhaitez modifier le site il vous est possible de changer les fichiers JSON en conservant leurs structures.
-Dans le fichier sensor-resume.html un warning apparait à la validation W3C car il manque un h1 dans une section. En effet la balise est générée au chargement de la page en js.
+Dans le fichier sensor-resume.html un warning apparait à la validation W3C car il manque un h2 dans une section. En effet la balise h2 est générée au chargement de la page en js.
 
 ## Thème
 
